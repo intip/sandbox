@@ -119,11 +119,14 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     #project
     'frontend',
+    'portlet',
     'placeholder',
     'nscms.simplenews',
     'taggit',
+    'bootstrap_toolkit',
     'ckeditor',
     'django_extensions',
+    'easy_thumbnails',
     #core
     'django.contrib.admin',
     'django.contrib.auth',

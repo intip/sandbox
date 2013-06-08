@@ -1,4 +1,4 @@
-{% load webdesign placeholder_tags %}<!DOCTYPE html>
+{% load webdesign placeholder_tags thumbnail %}<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -228,10 +228,23 @@
             </div>
         </div>
         <div class="row">
-            {% include "includes/span3_destaque.html" %}
-            {% include "includes/span3_destaque.html" %}
-            {% include "includes/span3_destaque.html" %}
-            {% include "includes/span3_destaque.html" %}
+            {% for portlet in portlets %}
+                    {% placeholder_instance portlet %}
+                    <div class="span3">
+                        <a href="#">
+                            <h6>
+                                {{ portlet.titulo }}
+                            </h6>
+                            {% if portlet.imagem_posicao %}
+                                <img style="margin:10px; float: {{ portlet.imagem_posicao }}" src="{% thumbnail portlet.imagem 150x0 autocrop=True crop="smart" %}" alt="">
+                            {% else %}
+                                <img src="{% thumbnail portlet.imagem 300x0 autocrop=True crop="smart" %}" alt="">
+                            {% endif %}
+                            {{ portlet.texto|linebreaks }}
+                        </a>
+                    </div>
+                {% endplaceholder_instance %}
+            {% endfor %}
         </div>
         <hr />
         <div class="row">
