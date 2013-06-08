@@ -1,3 +1,5 @@
-{% for portlet in slot.portlets.all %}
-    {{ portlet.id }}
-{% endfor %}
+<div id="slot-{{ slot.key }}" class="__slot">
+    {% for portlet in slot.portlets.all %}
+        {{ portlet.id }}
+    {% endfor %}
+</div>
