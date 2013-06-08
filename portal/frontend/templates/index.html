@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load webdesign %}
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}bootstrap/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="span8 page-header">
+                <h1>Portal</h1>
+            </div>
+            <div class="span4">
+                <div>
+                    <a class="btn" href="#"><i class="icon-home"></i> </a>
+                    <a class="btn" href="#"><i class="icon-envelope"></i> </a>
+                    <a class="btn" href="#"><i class="icon-plus"></i> A</a>
+                    <a class="btn" href="#"><i class="icon-minus"></i> A</a>
+                </div>
+            </div>
+        </div>
+        <section id="navbar">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container" style="width: auto;">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse">
+                  <ul class="nav">
+                    <li class="active"><a href="#">Notícias</a></li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Galerias</a></li>
+                    <li class="dropdown">
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-search pull-left" action="">
+                    <input type="text" class="search-query span2" placeholder="Search">
+                  </form>
+                  <ul class="nav pull-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categorias <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div><!-- /.nav-collapse -->
+              </div>
+            </div><!-- /navbar-inner -->
+          </div><!-- /navbar -->
+        </section>
+        <div class="row">
+            <div class="span4">
+                <h3>{% lorem 8 w %}</h3>
+                {% lorem 1 p %}
+            </div>
+            <div class="span4">
+                <div class="thumbnail">
+                  <img src="http://placehold.it/370x277" alt="">
+                </div>
+            </div>
+            <div class="span4">
+                <iframe width="370" height="277" src="http://www.youtube.com/embed/P3WJX1cIuY4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            {% include "includes/span3_categoria.html" %}
+            {% include "includes/span3_categoria.html" %}
+            {% include "includes/span3_categoria.html" %}
+            {% include "includes/span3_categoria.html" %}
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="span4">
+                <img src="http://placehold.it/370x100&text=Banner" alt="">
+            </div>
+            <div class="span4">
+                <img src="http://placehold.it/370x100&text=Banner" alt="">
+            </div>
+            <div class="span4">
+                <img src="http://placehold.it/370x100&text=Banner" alt="">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="span8">
+                <h4>Multimídia</h4>
+            </div>
+            <div class="span4">
+                <ul class="nav nav-pills">
+                  <li><a href="#">Aúdios</a></li>
+                  <li><a href="#">Fotos</a></li>
+                  <li><a href="#">Vídeos</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span8">
+                <img src="http://placehold.it/740x300&text=Multimídia" alt="">
+                {% lorem 30 w %}
+            </div>
+            <div class="span4">
+                <ul class="thumbnails">
+                    <li class="span2">
+                      <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/185x60" alt="">
+                        <div class="caption">
+                            <p>
+                                {% lorem 10 w %}
+                            </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="span2">
+                      <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/185x60" alt="">
+                        <div class="caption">
+                            <p>
+                                {% lorem 10 w %}
+                            </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="span2">
+                      <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/185x60" alt="">
+                        <div class="caption">
+                            <p>
+                                {% lorem 10 w %}
+                            </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="span2">
+                      <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/185x60" alt="">
+                        <div class="caption">
+                            <p>
+                                {% lorem 10 w %}
+                            </p>
+                        </div>
+                      </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="span4">
+                <img src="http://placehold.it/370x100&text=Banner" alt="">
+            </div>
+            <div class="span4">
+                <img src="http://placehold.it/370x100&text=Banner" alt="">
+            </div>
+            <div class="span4">
+                <img src="http://placehold.it/370x100&text=Banner" alt="">
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="span12">
+                <h4>Destaques</h4>
+            </div>
+        </div>
+        <div class="row">
+            {% include "includes/span3_destaque.html" %}
+            {% include "includes/span3_destaque.html" %}
+            {% include "includes/span3_destaque.html" %}
+            {% include "includes/span3_destaque.html" %}
+        </div>
+        <hr />
+        <div class="row">
+            <div class="span10">
+                <h4>Agenda</h4>
+            </div>
+            <div class="span2">
+                <a href="#">
+                    Programação completa
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span1 well" align="center">
+                <strong>21</strong>
+                <br />
+                <small>OUT</small>
+            </div>
+            <div class="span4">
+                <a href="#">
+                    {% lorem 5 w %}
+                </a>
+                <p>
+                    {% lorem 10 w %}
+                </p>
+                <a href="#">Leia mais</a>
+            </div>
+            <div class="span1 well" align="center">
+                <strong>22</strong>
+                <br />
+                <small>OUT</small>
+            </div>
+            <div class="span4">
+                <a href="#">
+                    {% lorem 5 w %}
+                </a>
+                <p>
+                    {% lorem 10 w %}
+                </p>
+                <a href="#">Leia mais</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span1 well" align="center">
+                <strong>24</strong>
+                <br />
+                <small>OUT</small>
+            </div>
+            <div class="span4">
+                <a href="#">
+                    {% lorem 5 w %}
+                </a>
+                <p>
+                    {% lorem 10 w %}
+                </p>
+                <a href="#">Leia mais</a>
+            </div>
+            <div class="span1 well" align="center">
+                <strong>25</strong>
+                <br />
+                <small>OUT</small>
+            </div>
+            <div class="span4">
+                <a href="#">
+                    {% lorem 5 w %}
+                </a>
+                <p>
+                    {% lorem 10 w %}
+                </p>
+                <a href="#">Leia mais</a>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="span12">
+                <h4>Tags</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; Company 2012</p>
+        </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{{STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
+    {% include "placeholder/includes/head.html" %}
+  </body>
+</html>

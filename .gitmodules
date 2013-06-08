@@ -1,0 +1,3 @@
+[submodule "portal/django-placeholder"]
+	path = portal/django-placeholder
+	url = git@github.com:mauler/django-placeholder.git
