@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append("django-placeholder")
+sys.path.append("../django-placeholder")
 
 # Django settings for portal project.
 
@@ -104,10 +104,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'portal.urls'
+ROOT_URLCONF = 'project.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'portal.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".

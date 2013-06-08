@@ -10,6 +10,5 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'frontend.views.index', name='index'),
-    # url(r'^portal/', include('portal.foo.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
