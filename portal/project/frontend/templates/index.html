@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+{% load webdesign placeholder_tags %}<!DOCTYPE html>
 <html lang="en">
-    {% load webdesign %}
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Bootstrap, from Twitter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -93,9 +92,19 @@
                 {% lorem 1 p %}
             </div>
             <div class="span4">
-                <div class="thumbnail">
-                  <img src="http://placehold.it/370x277" alt="">
-                </div>
+                <h3>Últimas notícias</h3>
+                <ul>
+                    {% for i in simplenews_latest %}
+                    <li>
+                        <a href="#">
+                            {% placeholder i "title" %}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+<!--                <div class="thumbnail">-->
+<!--                  <img src="http://placehold.it/370x277" alt="">-->
+<!--                </div>-->
             </div>
             <div class="span4">
                 <iframe width="370" height="277" src="http://www.youtube.com/embed/P3WJX1cIuY4" frameborder="0" allowfullscreen></iframe>

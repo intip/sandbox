@@ -1,3 +1,6 @@
 [submodule "portal/django-placeholder"]
 	path = portal/django-placeholder
 	url = git@github.com:mauler/django-placeholder.git
+[submodule "portal/nscms"]
+	path = portal/nscms
+	url = git@github.com:mauler/nscms.git

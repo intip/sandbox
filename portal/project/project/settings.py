@@ -1,6 +1,7 @@
 import sys
 
 sys.path.append("../django-placeholder")
+sys.path.append("../nscms")
 
 # Django settings for portal project.
 
@@ -52,7 +53,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = 'media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -121,6 +122,7 @@ INSTALLED_APPS = (
     'placeholder',
     'nscms.simplenews',
     'taggit',
+    'ckeditor',
     #core
     'django.contrib.admin',
     'django.contrib.auth',
@@ -160,3 +162,15 @@ LOGGING = {
         },
     }
 }
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages",
+    "frontend.context_processors.portal")
+
+CKEDITOR_UPLOAD_PATH = "media/uploads"
