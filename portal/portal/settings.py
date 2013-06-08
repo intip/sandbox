@@ -119,6 +119,8 @@ INSTALLED_APPS = (
     #project
     'frontend',
     'placeholder',
+    'nscms.simplenews',
+    'taggit',
     #core
     'django.contrib.admin',
     'django.contrib.auth',
