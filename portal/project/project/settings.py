@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     'frontend',
     'portlet',
     'placeholder',
+    'slot',
     'nscms.simplenews',
     'taggit',
     'bootstrap_toolkit',

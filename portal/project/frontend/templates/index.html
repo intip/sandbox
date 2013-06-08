@@ -1,4 +1,4 @@
-{% load webdesign placeholder_tags thumbnail %}<!DOCTYPE html>
+{% load webdesign placeholder_tags thumbnail slot_tags %}<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -86,6 +86,9 @@
             </div><!-- /navbar-inner -->
           </div><!-- /navbar -->
         </section>
+        <div class="row">
+            {% slot "topo" simplenews_featured %}
+        </div>
         <div class="row">
             <div class="span4">
                 {% placeholder_instance simplenews_featured %}
