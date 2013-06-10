@@ -8,14 +8,11 @@ from slot.models import Portlet
 
 class HTML(Portlet):
     titulo = models.CharField(max_length=100)
-    html = models.TextField()
+    code = models.TextField()
 
 
 class UltimasNoticias(Portlet):
-    pass
-#    numero = models.IntegerField(default=5)
-#    template = models.CharField(choices=)
-#    outra_template = HtmlEditor(git_path=)
+    numero = models.PositiveIntegerField(default=5)
 
 
 class Noticia(Portlet):

@@ -1,0 +1,10 @@
+<div align="center">
+    {% for portlet_class in portlet_classes %}
+        <a href="{{ portlet_class.url }}?_popup=1">
+            {{ portlet_class.name }}
+        </a>
+        {% if not forloop.last %}
+             |
+        {% endif %}
+    {% endfor %}
+</div>

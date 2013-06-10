@@ -14,6 +14,7 @@ urlpatterns = patterns('',
         'document_root': settings.MEDIA_ROOT,
         'show_indexes': True
     }),
+    url(r'^slot/', include("slot.urls", namespace="slot")),
     url(r'^$', 'frontend.views.index', name='index'),
     url(r'^ckeditor/', include("ckeditor.urls")),
     url(r'^placeholder/', include("placeholder.urls")),
